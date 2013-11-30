@@ -8,8 +8,7 @@
 /* strcat: copies the string t to the end of s. */
 void strcat(char *s, char *t)
 {
-	while (*s)	/* check first then increment */
-		s++;
+	while (*++s);
 	while (*s++ = *t++);
 }
 
