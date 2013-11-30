@@ -8,7 +8,8 @@
 /* strcat: copies the string t to the end of s. */
 void strcat(char *s, char *t)
 {
-	while (*++s);
+	while (*s)	/* check first then increment */
+		s++;
 	while (*s++ = *t++);
 }
 
@@ -16,7 +17,7 @@ void strcat(char *s, char *t)
 void main()
 {
 	char t[MAX_CHARS] = "Abdelgadir";
-	char s [MAX_CHARS] = "Sami ";
+	char s [MAX_CHARS] = "";
 	strcat(s, t);
 	printf("%s", s);
 
