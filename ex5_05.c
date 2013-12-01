@@ -18,7 +18,8 @@ void strncpy(char *s, char *t, int n)
 /* strncat: concatenates at most n characters of t to the end of s.*/
 void strncat(char *s, char *t, int n)
 {
-	while (*++s);
+	while (*s)
+		s++;
 	while (n-- && (*s++ = *t++));
 	if (*s)
 		*s = '\0';
