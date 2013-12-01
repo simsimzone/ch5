@@ -28,8 +28,8 @@ void strncat(char *s, char *t, int n)
 /* strncmp: compares most n characters of t to s.*/
 int strncmp(char *s, char *t, int n)
 {
-	while (n-- && (*s++ == *t++));
-	return n > 0 ? *--s - *--t : 0;
+	while (n-- && *s == *t && *s++ && *t++);
+	return n > 0 ? *--s - *t : 0;
 }
 
 #define MAX_CHARS 100
